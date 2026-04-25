@@ -1,0 +1,281 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, 'Segoe UI', 'Poppins', 'Roboto', sans-serif;
+  background-image: url('../images/Photo by Geoffrey Guillaume on Unsplash.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  color: #1e2a2e;
+  line-height: 1.6;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(254, 249, 239, 0.85);
+  z-index: -1;
+}
+
+.nav-rect {
+  background: linear-gradient(95deg, #0b2b26, #1e4a3b);
+  padding: 1rem 2rem;
+  border-radius: 20px;
+  margin: 1.5rem 2rem 2rem 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  z-index: 1;
+  position: relative;
+}
+
+.brand-left {
+  flex-shrink: 0;
+}
+
+.brand-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #f7f3e9;
+}
+
+.brand-tagline {
+  font-size: 0.75rem;
+  color: #d4c9b8;
+  line-height: 1.3;
+}
+
+.nav-menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+}
+
+.nav-menu li a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #f7f3e9;
+  padding: 0.5rem 1rem;
+  border-radius: 40px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.nav-menu li a:hover,
+.nav-menu li a.active {
+  background-color: #f4a261;
+  color: #0b2b26;
+  transform: translateY(-2px);
+
+}/* Center the audio container text */
+    audio {
+      display: block;
+    }
+
+    /* Center the "Sounds of Kigali" section */
+    h2:has(+ audio), 
+    h2:has(+ p + audio),
+    h2:has(+ div + audio) {
+      text-align: center;
+    }
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem 3rem;
+  z-index: 1;
+  position: relative;
+}
+
+.page-header h1 {
+  font-size: 3rem;
+  color: #0b2b26;
+}
+
+.subhead {
+  font-size: 1.2rem;
+  border-left: 5px solid #f4a261;
+  padding-left: 1rem;
+  margin: 0.5rem 0 2rem;
+}
+
+.hero-image img {
+  width: 100%;
+  border-radius: 28px;
+  margin-bottom: 2rem;
+  border-bottom: 5px solid #f4a261;
+}
+
+.two-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.column h2 {
+  color: #1e4a3b;
+  margin-bottom: 1rem;
+}
+
+.column ul, .column ol {
+  margin-left: 1.5rem;
+}
+
+.info-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 1rem 0;
+}
+
+.info-table th, .info-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+}
+
+.info-table th {
+  background: #1e4a3b;
+  color: white;
+}
+
+.section-title {
+  text-align: center;
+  margin: 2rem 0 1rem;
+}
+
+.map-container, .media-container {
+  margin: 1rem 0 2rem;
+  border-radius: 28px;
+  overflow: hidden;
+}
+
+audio, video {
+  width: 100%;
+  border-radius: 24px;
+}
+
+.contact-form {
+  background: white;
+  padding: 2rem;
+  border-radius: 28px;
+  margin-top: 2rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 60px;
+  border: 1px solid #ddd;
+}
+
+.contact-form textarea {
+  border-radius: 24px;
+  margin-bottom: 1rem;
+}
+
+.contact-form button {
+  background: #1e4a3b;
+  color: white;
+  padding: 12px 28px;
+  border-radius: 60px;
+  border: none;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: #f4a261;
+  color: #0b2b26;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: #1e2a2e;
+  color: #fef9ef;
+  border-radius: 32px 32px 0 0;
+}
+
+footer a {
+  color: #f4a261;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .two-columns { grid-template-columns: 1fr; }
+  .form-row { flex-direction: column; }
+}
+/* Back to Home Button with Emoji Icon */
+.back-home-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: linear-gradient(95deg, #0b2b26, #1e4a3b);
+  color: #f7f3e9;
+  padding: 12px 24px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  z-index: 1000;
+  font-family: system-ui, 'Segoe UI', 'Poppins', 'Roboto', sans-serif;
+  border: none;
+  cursor: pointer;
+}
+
+.back-home-btn::before {
+  content: "🏠";
+  font-size: 1.2rem;
+}
+
+.back-home-btn:hover {
+  background: #f4a261;
+  color: #0b2b26;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}
+
+.back-home-btn:hover::before {
+  content: "🏡";
+}
+
+.back-home-btn:active {
+  transform: translateY(0px);
+}
+
+@media (max-width: 768px) {
+  .back-home-btn {
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 18px;
+    font-size: 0.85rem;
+  }
+  .back-home-btn::before {
+    font-size: 1rem;
+  }
+}

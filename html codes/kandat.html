@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kandat Restaurant | Kigali Hidden Gems</title>
+  <style> * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, 'Segoe UI', 'Poppins', 'Roboto', sans-serif;
+  background-image: url('../images/Photo by Geoffrey Guillaume on Unsplash.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #1e2a2e;
+  line-height: 1.6;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(254, 249, 239, 0.85);
+  z-index: -1;
+}
+
+.nav-rect {
+  background: linear-gradient(95deg, #0b2b26, #1e4a3b);
+  padding: 1rem 2rem;
+  border-radius: 20px;
+  margin: 1.5rem 2rem 2rem 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.brand-left {
+  flex-shrink: 0;
+}
+
+.brand-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #f7f3e9;
+}
+
+.brand-tagline {
+  font-size: 0.75rem;
+  color: #d4c9b8;
+  line-height: 1.3;
+}
+
+.nav-menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+}
+
+.nav-menu li a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #f7f3e9;
+  padding: 0.5rem 1rem;
+  border-radius: 40px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.nav-menu li a:hover,
+.nav-menu li a.active {
+  background-color: #f4a261;
+  color: #0b2b26;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 900px) {
+  .nav-rect { flex-direction: column; text-align: center; }
+  .nav-menu { justify-content: center; }
+  .brand-left { text-align: center; }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem 3rem;
+  position: relative;
+  z-index: 1;
+}
+
+.page-header h1 {
+  font-size: 3rem;
+  color: #0b2b26;
+}
+
+.subhead {
+  font-size: 1.2rem;
+  border-left: 5px solid #f4a261;
+  padding-left: 1rem;
+  margin: 0.5rem 0 2rem;
+}
+
+.hero-image img {
+  width: 100%;
+  border-radius: 28px;
+  margin-bottom: 2rem;
+  border-bottom: 5px solid #f4a261;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.two-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.column h2 {
+  color: #1e4a3b;
+  margin-bottom: 1rem;
+}
+
+.column ul, .column ol {
+  margin-left: 1.5rem;
+}
+
+.column li {
+  margin: 0.5rem 0;
+}
+
+.info-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 1rem 0 2rem;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+}
+
+.info-table th, .info-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+.info-table th {
+  background: #1e4a3b;
+  color: white;
+}
+
+.section-title {
+  text-align: center;
+  margin: 2rem 0 1rem;
+  color: #0b2b26;
+}
+
+.map-container, .media-container {
+  margin: 1rem 0 2rem;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+audio, video {
+  width: 100%;
+  border-radius: 24px;
+}
+
+.contact-form {
+  background: white;
+  padding: 2rem;
+  border-radius: 28px;
+  margin: 2rem 0;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 60px;
+  border: 1px solid #ddd;
+  font-family: inherit;
+}
+
+.contact-form textarea {
+  border-radius: 24px;
+  margin-bottom: 0;
+}
+
+.contact-form button {
+  background: #1e4a3b;
+  color: white;
+  padding: 12px 28px;
+  border-radius: 60px;
+  border: none;
+  margin-top: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.contact-form button:hover {
+  background: #f4a261;
+  color: #0b2b26;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: #1e2a2e;
+  color: #fef9ef;
+  border-radius: 32px 32px 0 0;
+  margin-top: 2rem;
+}
+
+footer a {
+  color: #f4a261;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .two-columns { grid-template-columns: 1fr; }
+  .form-row { flex-direction: column; }
+}</style>
+  <link rel="stylesheet" href="css/kandat.css">
+</head>
+<body>
+
+<div class="nav-rect">
+  <div class="brand-left">
+    <div class="brand-name">🇷🇼 Kigali Hidden Gems</div>
+    <div class="brand-tagline">Where culture, cuisine, <br>and city🌆 beauty meet</div>
+  </div>
+  <ul class="nav-menu">
+    <li><a href="index.html">🏠 Home</a></li>
+    <li><a href="nyamirambo.html">🍜 Nyamirambo</a></li>
+    <li><a href="convention-centre.html">🏛️ Convention Centre</a></li>
+    <li><a href="inzora.html">☕ Inzora</a></li>
+    <li><a href="kandat.html" class="active">🍽️ Kandat</a></li>
+  </ul>
+</div>
+
+<main class="container">
+  <div class="page-header"> 
+    <a href="index.html" class="back-home-btn">🏠</a><br><br>
+    <h1>🍽️ Kandat Nyarutarama Restaurant</h1>
+    <div class="subhead">Authentic Rwandan & East African dishes, cozy ambiance in Nyarutarama.</div>
+  </div>
+
+  <div class="hero-image">
+    <img src="https://live.staticflickr.com/5500/31001188970_b511e9e91e_b.jpg" alt="Kandat Restaurant - Nyarutarama">
+  </div>
+
+  <div class="two-columns">
+    <div class="column">
+      <h2>🔥 Must-Try Dishes (Ordered)</h2>
+      <ol>
+        <li>Goat Brochettes with spicy peanut sauce</li>
+        <li>Isombe with Cassava leaves</li>
+        <li>Grilled Tilapia from Lake Kivu</li>
+        <li>Plantain Chips with avocado dip</li>
+        <li>Traditional Rwandan beef stew</li>
+      </ol>
+    </div>
+    <div class="column">
+      <h2>📍 Location & Hours</h2>
+      <ul>
+        <li>Monday - Sunday: 11:00 AM - 11:00 PM</li>
+        <li>Live music on Fridays</li>
+        <li>Outdoor seating available</li>
+        <li>Free Wi-Fi for guests</li>
+        <li>Parking available</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>🍲 Popular Dishes</h2>
+  <table class="info-table">
+    <thead><tr><th>Dish</th><th>Description</th><th>Price (RWF)</th></tr></thead>
+    <tbody>
+      <tr><td>Brochette Mixte</td><td>Goat, beef & chicken skewers</td><td>8,500</td></tr>
+      <tr><td>Isombe</td><td>Cassava leaves with eggplant</td><td>4,500</td></tr>
+      <tr><td>Grilled Tilapia</td><td>Whole fish with lemon butter</td><td>12,000</td></tr>
+    </tbody>
+  </table>
+<h2 class="section-title">🎵 Dining Atmosphere</h2>
+  <div class="media-container">
+    <audio controls>
+      <source src="audio/audio.mpeg" type="audio/mpeg">
+  </div>
+<!-- GOOGLE MAP: Kigali Map with SATELLITE imagery -->
+<h2 style="text-align: center;">🗺️ Find Kandat Restaurant (Satellite View)</h2>
+<div style="margin: 1rem 0 2rem; border-radius: 28px; overflow: hidden; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); position: relative;">
+  <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15956.456789012345!2d30.0618851!3d-1.9440727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19dca4258ed8e797%3A0xf32b36a5411d0bc8!2sKigali!5e0!3m2!1sen!2srw!4v1710000000000&t=k" 
+    width="100%" 
+    height="400" 
+    style="border:0; border-radius: 28px;" 
+    allowfullscreen="" 
+    loading="lazy" 
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+  <div style="position: absolute; bottom: 15px; right: 15px; background: rgba(0, 0, 0, 0.7); color: white; padding: 5px 12px; border-radius: 20px; font-size: 0.7rem; font-family: system-ui; pointer-events: none; backdrop-filter: blur(4px);">
+    🛰️ Satellite View
+  </div>
+</div>
+
+<!-- Shareable link for Google Map - CENTERED -->
+<div style="text-align: center; margin-top: 10px;">
+  <a href="https://www.google.com/maps/place/Kigali/@-1.9297706,30.1272444,11z/data=!3m1!4b1!4m6!3m5!1s0x19dca4258ed8e797:0xf32b36a5411d0bc8!8m2!3d-1.9440727!4d30.0618851!16zL20vMGZuaGY?entry=ttu" target="_blank" class="map-share">📍 Open Full Map & Share Location →</a>
+</div>
+
+  
+
+  </div>
+</main>
+
+<footer>
+  <p>© 2026 Explore Kigali — taste, wander, and feel the heartbeat of Rwanda.</p>
+  <p><a href="#">Back to top</a> | 🌍 <a href="https://visitrwanda.com/" target="_blank">Visit Rwanda Official</a></p>
+</footer>
+</body>
+</html>
