@@ -1,0 +1,262 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kigali Convention Centre | Kigali Hidden Gems</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, 'Segoe UI', 'Poppins', 'Roboto', sans-serif;
+      background-image: url('images/Photo by Geoffrey Guillaume on Unsplash.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: #1e2a2e;
+      line-height: 1.6;
+      position: relative;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: rgba(254, 249, 239, 0.88);
+      z-index: -1;
+    }
+
+    .nav-rect {
+      background: linear-gradient(95deg, #0b2b26, #1e4a3b);
+      padding: 1rem 2rem;
+      border-radius: 20px;
+      margin: 1.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .brand-name {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #f7f3e9;
+    }
+
+    .brand-tagline {
+      font-size: 0.75rem;
+      color: #d4c9b8;
+    }
+
+    .nav-menu {
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      gap: 0.5rem;
+    }
+
+    .nav-menu li a {
+      text-decoration: none;
+      color: #f7f3e9;
+      padding: 0.5rem 1rem;
+      border-radius: 40px;
+      background: rgba(255,255,255,0.05);
+      transition: 0.3s;
+    }
+
+    .nav-menu li a:hover,
+    .nav-menu li a.active {
+      background: #f4a261;
+      color: #0b2b26;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 2rem;
+    }
+
+    .back-home-btn {
+      display: inline-block;
+      text-decoration: none;
+      background: #1e4a3b;
+      color: white;
+      padding: 8px 14px;
+      border-radius: 50px;
+      transition: 0.3s;
+    }
+
+    .back-home-btn:hover {
+      background: #f4a261;
+      color: #0b2b26;
+    }
+
+    .page-header h1 {
+      font-size: 3rem;
+      color: #0b2b26;
+    }
+
+    .subhead {
+      font-size: 1.1rem;
+      border-left: 5px solid #f4a261;
+      padding-left: 1rem;
+      margin: 1rem 0 2rem;
+    }
+
+    .hero-image img {
+      width: 100%;
+      border-radius: 28px;
+      margin-bottom: 2rem;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+
+    .two-columns {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .column h2 {
+      color: #1e4a3b;
+      margin-bottom: 1rem;
+    }
+
+    .column ul,
+    .column ol {
+      margin-left: 1.5rem;
+    }
+
+    .column li {
+      margin-bottom: 0.5rem;
+    }
+
+    .info-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      margin: 2rem 0;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    .info-table th,
+    .info-table td {
+      padding: 12px;
+      border: 1px solid #ddd;
+    }
+
+    .info-table th {
+      background: #1e4a3b;
+      color: white;
+    }
+
+    .section-title {
+      text-align: center;
+      margin: 2rem 0 1rem;
+    }
+
+    .media-container,
+    .map-container {
+      margin: 1rem 0 2rem;
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    audio,
+    video {
+      width: 100%;
+      display: block;
+    }
+
+    .map-share {
+      display: inline-block;
+      margin-top: 10px;
+      text-decoration: none;
+      background: #1e4a3b;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 50px;
+      transition: 0.3s;
+    }
+
+    .map-share:hover {
+      background: #f4a261;
+      color: #0b2b26;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #1e2a2e;
+      color: #fef9ef;
+      border-radius: 32px 32px 0 0;
+    }
+
+    footer a {
+      color: #f4a261;
+      text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      .two-columns {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-rect {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .page-header h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="nav-rect">
+  <div>
+    <div class="brand-name">🇷🇼 Kigali Hidden Gems</div>
+    <div class="brand-tagline">Where culture, cuisine and city beauty meet</div>
+  </div>
+
+  <ul class="nav-menu">
+    <li><a href="index.html">🏠 Home</a></li>
+    <li><a href="nyamirambo.html">🍜 Nyamirambo</a></li>
+    <li><a href="convention-centre.html" class="active">🏛️ Convention Centre</a></li>
+    <li><a href="inzora.html">☕ Inzora</a></li>
+    <li><a href="kandat.html">🍽️ Kandat</a></li>
+  </ul>
+</div>
+
+<main class="container">
+  <div class="page-header">
+    <a href="index.html" class="back-home-btn">🏠 Back Home</a>
+    <h1>🏛️ Kigali Convention Centre</h1>
+    <div class="subhead">Iconic architecture, conference hub, skyline view & upscale dining.</div>
+  </div>
+
+  <div class="hero-image">
+    <img src="https://www.newtimes.co.rw/uploads/imported_images/files/main/articles/2018/09/21/radisson.jpg" alt="Kigali Convention Centre">
+  </div>
+
+  <!-- your remaining content stays here -->
+</main>
+
+<footer>
+  <p>© 2026 Explore Kigali — taste, wander, and feel the heartbeat of Rwanda.</p>
+  <p><a href="#">Back to top</a> | 🌍 <a href="https://visitrwanda.com/" target="_blank">Visit Rwanda Official</a></p>
+</footer>
+
+</body>
+</html>
