@@ -159,14 +159,9 @@ audio {
   margin-top: 1rem;
 }
 
-/* FORM */
-.contact-form {
-  background: white;
-  padding: 2rem;
-  border-radius: 25px;
-  margin-top: 2rem;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-}
+
+
+
 
 input,
 textarea,
